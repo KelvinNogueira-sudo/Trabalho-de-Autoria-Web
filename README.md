@@ -10,7 +10,7 @@
 - [x] Criar o `index.html` com apenas `<div id="root"></div>`, o link do Bootstrap (CSS) e o `<script type="module">`
 - [ ] Definir a estrutura de pastas, por exemplo:
     - [x] `js/api.js` (comunicação com a API)
-    - [ ] `js/cart.js` (gerenciamento do carrinho / localStorage)
+    - [x] `js/cart.js` (gerenciamento do carrinho / localStorage)
     - [ ] `js/dom.js` ou `js/views/` (criação de elementos)
     - [ ] `js/router.js` (navegação entre páginas)
     - [ ] `js/main.js` (ponto de entrada)
@@ -23,14 +23,14 @@
 
 ### 3. Módulo do carrinho (`cart.js`)
 
-- [ ] Definir o formato salvo no localStorage, por exemplo `[{ id, title, price, quantity }]`
-- [ ] `getCart()`: lê e faz o parse do JSON (retorna `[]` se vazio)
-- [ ] `saveCart(cart)`: grava no localStorage
-- [ ] `addItem(cafe)`: adiciona ou incrementa a quantidade
-- [ ] `removeItem(id)`: decrementa e remove do carrinho quando chegar a 0
-- [ ] `getTotalItems()`: soma das quantidades (para o ícone)
-- [ ] `getTotalPrice()`: total acumulado
-- [ ] `clearCart()`: remove os dados (usado ao finalizar)
+- [x] Definir o formato salvo no localStorage, por exemplo `[{ id, title, price, quantity }]`
+- [x] `getCart()`: lê e faz o parse do JSON (retorna `[]` se vazio)
+- [x] `saveCart(cart)`: grava no localStorage
+- [x] `addItem(cafe)`: adiciona ou incrementa a quantidade
+- [x] `removeItem(id)`: decrementa e remove do carrinho quando chegar a 0
+- [x] `getTotalItems()`: soma das quantidades (para o ícone)
+- [x] `getTotalPrice()`: total acumulado
+- [x] `clearCart()`: remove os dados (usado ao finalizar)
 
 ### 4. Estrutura comum (DOM e navegação)
 
