@@ -1,0 +1,91 @@
+# Checklist Trabalho de Autoria Web
+
+### 1. Preparação do projeto
+
+- [x] Criar a pasta do projeto e rodar `npm init -y`
+- [x] Instalar o json-server: `npm install json-server`
+- [x] Criar o `db.json` na raiz com pelo menos 5 a 8 cafés (campos: `id`, `title`, `description`, `ingredients[]`, `price`, `image`)
+- [x] Rodar `npx json-server db.json` e testar `http://localhost:3000/cafes` no navegador
+- [x] Testar também `http://localhost:3000/cafes/1`
+- [ ] Criar o `index.html` com apenas `<div id="root"></div>`, o link do Bootstrap (CSS) e o `<script type="module">`
+- [ ] Definir a estrutura de pastas, por exemplo:
+    - `js/api.js` (comunicação com a API)
+    - `js/cart.js` (gerenciamento do carrinho / localStorage)
+    - `js/dom.js` ou `js/views/` (criação de elementos)
+    - `js/router.js` (navegação entre páginas)
+    - `js/main.js` (ponto de entrada)
+
+### 2. Módulo da API (`api.js`)
+
+- [ ] Função `getCafes()` com `fetch` GET em `/cafes`
+- [ ] Função `getCafeById(id)` (opcional, mas o enunciado cita o endpoint)
+- [ ] Tratar erro de rede (mostrar mensagem se a API estiver fora do ar)
+
+### 3. Módulo do carrinho (`cart.js`)
+
+- [ ] Definir o formato salvo no localStorage, por exemplo `[{ id, title, price, quantity }]`
+- [ ] `getCart()`: lê e faz o parse do JSON (retorna `[]` se vazio)
+- [ ] `saveCart(cart)`: grava no localStorage
+- [ ] `addItem(cafe)`: adiciona ou incrementa a quantidade
+- [ ] `removeItem(id)`: decrementa e remove do carrinho quando chegar a 0
+- [ ] `getTotalItems()`: soma das quantidades (para o ícone)
+- [ ] `getTotalPrice()`: total acumulado
+- [ ] `clearCart()`: remove os dados (usado ao finalizar)
+
+### 4. Estrutura comum (DOM e navegação)
+
+- [ ] Função utilitária para criar elementos (ex.: `createElement(tag, classes, texto)`)
+- [ ] Criar o **cabeçalho** com título/logo e o ícone de carrinho com o contador (badge)
+- [ ] Tornar o ícone clicável, levando ao carrinho
+- [ ] Implementar o roteador: limpa o conteúdo do `root` e renderiza a página correspondente
+- [ ] Garantir que o contador do cabeçalho atualize sempre que o carrinho mudar
+
+### 5. Página inicial (Index)
+
+- [ ] Buscar os cafés com `getCafes()` ao carregar
+- [ ] Renderizar a lista em grid de cards do Bootstrap
+- [ ] Cada card mostra: **título, descrição, preço, imagem, ingredientes**
+- [ ] Botão “Adicionar ao carrinho” em cada card
+- [ ] Ao clicar, chamar `addItem` e atualizar o contador do cabeçalho
+- [ ] Mostrar estado de carregamento e mensagem de erro
+
+### 6. Página do carrinho
+
+- [ ] Ler os itens do localStorage e renderizar a lista
+- [ ] Cada item mostra: **nome, preço, quantidade**
+- [ ] Botão **+** (adicionar unidade) e botão **−** (remover unidade)
+- [ ] Atualizar a tela (item, total e contador) após cada clique
+- [ ] Exibir o **total acumulado**
+- [ ] Tratar carrinho vazio (mensagem + link para voltar à loja, e desabilitar o “Finalizar Compra”)
+- [ ] Botão **“Finalizar Compra”** que leva à página de finalização
+
+### 7. Página de finalização
+
+- [ ] Exibir os itens do carrinho e o total
+- [ ] Formulário com **endereço de entrega** (texto)
+- [ ] Campo de **método de pagamento** (select ou radio: cartão de crédito, boleto, PIX)
+- [ ] Botão **“Finalizar”**
+- [ ] **Validação:** endereço não vazio (e com tamanho mínimo razoável) e pagamento selecionado
+- [ ] Mostrar erros de validação ao usuário (classes `is-invalid` do Bootstrap)
+- [ ] Se válido: exibir **mensagem de confirmação** da compra
+- [ ] Chamar `clearCart()` e atualizar o contador do cabeçalho para 0
+- [ ] Oferecer botão para voltar à página inicial
+
+### 8. Responsividade e visual (Bootstrap)
+
+- [ ] Incluir a meta tag viewport
+- [ ] Usar o grid do Bootstrap (`row`, `col-12 col-md-6 col-lg-4`) nos cards
+- [ ] Testar em tamanho de celular (DevTools) nas 3 telas
+- [ ] Imagens responsivas (`img-fluid` / `card-img-top`)
+- [ ] Navbar adaptada para mobile
+
+### 9. Revisão final (antes de entregar)
+
+- [ ] O HTML tem **somente** a `div#root` no body (além do script)
+- [ ] Todo o DOM é manipulado via `document` (sem frameworks)
+- [ ] O código está modularizado: DOM, API e carrinho em arquivos separados
+- [ ] O carrinho persiste ao recarregar a página e ao fechar/abrir o navegador
+- [ ] Fluxo completo testado: adicionar → ver carrinho → alterar quantidades → finalizar → carrinho zerado
+- [ ] Testar com a API desligada (o erro é tratado?)
+- [ ] Incluir um `README` com os passos para rodar (`npm install`, `npx json-server db.json`, abrir o front, por exemplo com Live Server)
+- [ ] Conferir o formato de entrega exigido pelo professor (zip, repositório etc.)
