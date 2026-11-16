@@ -7,19 +7,19 @@
 - [x] Criar o `db.json` na raiz com pelo menos 5 a 8 cafés (campos: `id`, `title`, `description`, `ingredients[]`, `price`, `image`)
 - [x] Rodar `npx json-server db.json` e testar `http://localhost:3000/cafes` no navegador
 - [x] Testar também `http://localhost:3000/cafes/1`
-- [ ] Criar o `index.html` com apenas `<div id="root"></div>`, o link do Bootstrap (CSS) e o `<script type="module">`
+- [x] Criar o `index.html` com apenas `<div id="root"></div>`, o link do Bootstrap (CSS) e o `<script type="module">`
 - [ ] Definir a estrutura de pastas, por exemplo:
-    - `js/api.js` (comunicação com a API)
-    - `js/cart.js` (gerenciamento do carrinho / localStorage)
-    - `js/dom.js` ou `js/views/` (criação de elementos)
-    - `js/router.js` (navegação entre páginas)
-    - `js/main.js` (ponto de entrada)
+    - [x] `js/api.js` (comunicação com a API)
+    - [ ] `js/cart.js` (gerenciamento do carrinho / localStorage)
+    - [ ] `js/dom.js` ou `js/views/` (criação de elementos)
+    - [ ] `js/router.js` (navegação entre páginas)
+    - [ ] `js/main.js` (ponto de entrada)
 
 ### 2. Módulo da API (`api.js`)
 
-- [ ] Função `getCafes()` com `fetch` GET em `/cafes`
-- [ ] Função `getCafeById(id)` (opcional, mas o enunciado cita o endpoint)
-- [ ] Tratar erro de rede (mostrar mensagem se a API estiver fora do ar)
+- [x] Função `getCafes()` com `fetch` GET em `/cafes`
+- [x] Função `getCafeById(id)` (opcional, mas o enunciado cita o endpoint)
+- [x] Tratar erro de rede (mostrar mensagem se a API estiver fora do ar)
 
 ### 3. Módulo do carrinho (`cart.js`)
 
