@@ -13,11 +13,6 @@ export function getCart() {
   }
 }
 
-// Salva os items no carrinho
-export function saveCart(cart) {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
 // Adiciona um item no carrinho
 export function addItem(cafe) {
   const cart = getCart();                                       // Pega os itens do carrinho
@@ -26,7 +21,7 @@ export function addItem(cafe) {
   if (existing) {
     existing.quantity += 1;
   } else {
-    cart.push({                                                 // Senão, adiciona ele ao carrinho
+    cart.push({                                                 // Senão, adiciona ele ao carrinho (no caso, é um array)
       id: cafe.id,
       title: cafe.title,
       price: cafe.price,
@@ -63,7 +58,14 @@ export function getTotalPrice() {
     return getCart().reduce((total, item) => total + item.price * item.quantity, 0);
 }
 
+// Salva os items no carrinho
+export function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.dispatchEvent(new Event("cartchange"));             // Evento que indica que a quantidade de produtos no carrinho mudou
+}
+
 // Limpa o carrinho
 export function cleanCart() {
     localStorage.removeItem(CART_KEY);
+    window.dispatchEvent(new Event("cartchange"));
 }

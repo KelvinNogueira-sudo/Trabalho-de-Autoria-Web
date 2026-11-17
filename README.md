@@ -11,8 +11,8 @@
 - [ ] Definir a estrutura de pastas, por exemplo:
     - [x] `js/api.js` (comunicação com a API)
     - [x] `js/cart.js` (gerenciamento do carrinho / localStorage)
-    - [ ] `js/dom.js` ou `js/views/` (criação de elementos)
-    - [ ] `js/router.js` (navegação entre páginas)
+    - [x] `js/dom.js` ou `js/views/` (criação de elementos)
+    - [x] `js/router.js` (navegação entre páginas)
     - [ ] `js/main.js` (ponto de entrada)
 
 ### 2. Módulo da API (`api.js`)
@@ -34,11 +34,11 @@
 
 ### 4. Estrutura comum (DOM e navegação)
 
-- [ ] Função utilitária para criar elementos (ex.: `createElement(tag, classes, texto)`)
-- [ ] Criar o **cabeçalho** com título/logo e o ícone de carrinho com o contador (badge)
-- [ ] Tornar o ícone clicável, levando ao carrinho
-- [ ] Implementar o roteador: limpa o conteúdo do `root` e renderiza a página correspondente
-- [ ] Garantir que o contador do cabeçalho atualize sempre que o carrinho mudar
+- [x] Função utilitária para criar elementos (ex.: `createElement(tag, classes, texto)`)
+- [x] Criar o **cabeçalho** com título/logo e o ícone de carrinho com o contador (badge)
+- [x] Tornar o ícone clicável, levando ao carrinho
+- [x] Implementar o roteador: limpa o conteúdo do `root` e renderiza a página correspondente
+- [x] Garantir que o contador do cabeçalho atualize sempre que o carrinho mudar
 
 ### 5. Página inicial (Index)
 
