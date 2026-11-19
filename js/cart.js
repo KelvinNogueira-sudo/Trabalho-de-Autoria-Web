@@ -4,7 +4,7 @@
 // Chave usada no localStorage
 const CART_KEY = "cart";
 
-// Lê e retorna os itens no carrinho
+// Cria um carrinho com a Chave CART_KEY
 export function getCart() {
   try {
     return JSON.parse(localStorage.getItem(CART_KEY)) ?? [];
