@@ -8,12 +8,12 @@
 - [x] Rodar `npx json-server db.json` e testar `http://localhost:3000/cafes` no navegador
 - [x] Testar também `http://localhost:3000/cafes/1`
 - [x] Criar o `index.html` com apenas `<div id="root"></div>`, o link do Bootstrap (CSS) e o `<script type="module">`
-- [ ] Definir a estrutura de pastas, por exemplo:
-    - [x] `js/api.js` (comunicação com a API)
-    - [x] `js/cart.js` (gerenciamento do carrinho / localStorage)
-    - [x] `js/dom.js` ou `js/views/` (criação de elementos)
-    - [x] `js/router.js` (navegação entre páginas)
-    - [ ] `js/main.js` (ponto de entrada)
+- [x] Definir a estrutura de pastas, por exemplo:
+    -  `js/api.js` (comunicação com a API)
+    -  `js/cart.js` (gerenciamento do carrinho / localStorage)
+    -  `js/dom.js` ou `js/views/` (criação de elementos)
+    -  `js/router.js` (navegação entre páginas)
+    -  `js/main.js` (ponto de entrada)
 
 ### 2. Módulo da API (`api.js`)
 
@@ -42,12 +42,12 @@
 
 ### 5. Página inicial (Index)
 
-- [ ] Buscar os cafés com `getCafes()` ao carregar
-- [ ] Renderizar a lista em grid de cards do Bootstrap
-- [ ] Cada card mostra: **título, descrição, preço, imagem, ingredientes**
-- [ ] Botão “Adicionar ao carrinho” em cada card
-- [ ] Ao clicar, chamar `addItem` e atualizar o contador do cabeçalho
-- [ ] Mostrar estado de carregamento e mensagem de erro
+- [x] Buscar os cafés com `getCafes()` ao carregar
+- [x] Renderizar a lista em grid de cards do Bootstrap
+- [x] Cada card mostra: **título, descrição, preço, imagem, ingredientes**
+- [x] Botão “Adicionar ao carrinho” em cada card
+- [x] Ao clicar, chamar `addItem` e atualizar o contador do cabeçalho
+- [x] Mostrar estado de carregamento e mensagem de erro
 
 ### 6. Página do carrinho
 
