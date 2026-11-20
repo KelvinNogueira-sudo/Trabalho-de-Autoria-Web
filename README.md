@@ -51,41 +51,41 @@
 
 ### 6. Página do carrinho
 
-- [ ] Ler os itens do localStorage e renderizar a lista
-- [ ] Cada item mostra: **nome, preço, quantidade**
-- [ ] Botão **+** (adicionar unidade) e botão **−** (remover unidade)
-- [ ] Atualizar a tela (item, total e contador) após cada clique
-- [ ] Exibir o **total acumulado**
-- [ ] Tratar carrinho vazio (mensagem + link para voltar à loja, e desabilitar o “Finalizar Compra”)
-- [ ] Botão **“Finalizar Compra”** que leva à página de finalização
+- [x] Ler os itens do localStorage e renderizar a lista
+- [x] Cada item mostra: **nome, preço, quantidade**
+- [x] Botão **+** (adicionar unidade) e botão **−** (remover unidade)
+- [x] Atualizar a tela (item, total e contador) após cada clique
+- [x] Exibir o **total acumulado**
+- [x] Tratar carrinho vazio (mensagem + link para voltar à loja, e desabilitar o “Finalizar Compra”)
+- [x] Botão **“Finalizar Compra”** que leva à página de finalização
 
 ### 7. Página de finalização
 
-- [ ] Exibir os itens do carrinho e o total
-- [ ] Formulário com **endereço de entrega** (texto)
-- [ ] Campo de **método de pagamento** (select ou radio: cartão de crédito, boleto, PIX)
-- [ ] Botão **“Finalizar”**
-- [ ] **Validação:** endereço não vazio (e com tamanho mínimo razoável) e pagamento selecionado
-- [ ] Mostrar erros de validação ao usuário (classes `is-invalid` do Bootstrap)
-- [ ] Se válido: exibir **mensagem de confirmação** da compra
-- [ ] Chamar `clearCart()` e atualizar o contador do cabeçalho para 0
-- [ ] Oferecer botão para voltar à página inicial
+- [x] Exibir os itens do carrinho e o total
+- [x] Formulário com **endereço de entrega** (texto)
+- [x] Campo de **método de pagamento** (select ou radio: cartão de crédito, boleto, PIX)
+- [x] Botão **“Finalizar”**
+- [x] **Validação:** endereço não vazio (e com tamanho mínimo razoável) e pagamento selecionado
+- [x] Mostrar erros de validação ao usuário (classes `is-invalid` do Bootstrap)
+- [x] Se válido: exibir **mensagem de confirmação** da compra
+- [x] Chamar `clearCart()` e atualizar o contador do cabeçalho para 0
+- [x] Oferecer botão para voltar à página inicial
 
 ### 8. Responsividade e visual (Bootstrap)
 
-- [ ] Incluir a meta tag viewport
-- [ ] Usar o grid do Bootstrap (`row`, `col-12 col-md-6 col-lg-4`) nos cards
+- [x] Incluir a meta tag viewport
+- [x] Usar o grid do Bootstrap (`row`, `col-12 col-md-6 col-lg-4`) nos cards
 - [ ] Testar em tamanho de celular (DevTools) nas 3 telas
 - [ ] Imagens responsivas (`img-fluid` / `card-img-top`)
 - [ ] Navbar adaptada para mobile
 
 ### 9. Revisão final (antes de entregar)
 
-- [ ] O HTML tem **somente** a `div#root` no body (além do script)
-- [ ] Todo o DOM é manipulado via `document` (sem frameworks)
-- [ ] O código está modularizado: DOM, API e carrinho em arquivos separados
-- [ ] O carrinho persiste ao recarregar a página e ao fechar/abrir o navegador
-- [ ] Fluxo completo testado: adicionar → ver carrinho → alterar quantidades → finalizar → carrinho zerado
-- [ ] Testar com a API desligada (o erro é tratado?)
+- [x] O HTML tem **somente** a `div#root` no body (além do script)
+- [x] Todo o DOM é manipulado via `document` (sem frameworks)
+- [x] O código está modularizado: DOM, API e carrinho em arquivos separados
+- [x] O carrinho persiste ao recarregar a página e ao fechar/abrir o navegador
+- [x] Fluxo completo testado: adicionar → ver carrinho → alterar quantidades → finalizar → carrinho zerado
+- [x] Testar com a API desligada (o erro é tratado?)
 - [ ] Incluir um `README` com os passos para rodar (`npm install`, `npx json-server db.json`, abrir o front, por exemplo com Live Server)
 - [ ] Conferir o formato de entrega exigido pelo professor (zip, repositório etc.)
