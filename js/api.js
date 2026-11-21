@@ -20,17 +20,3 @@ export async function getCafes() {
 
   return await response.json();
 }
-
-// Busca os cafés pelo Id
-export async function getCafeById(id) {
-  const response = await fetch(`${API_URL}/cafes/${id}`);
-
-  // Checa se o café existe com base no Id
-  if (!response.ok) {
-    throw new Error(
-      `Falha ao buscar o café ${id}, (status: ${response.status})`,
-    );
-  }
-
-  return await response.json();
-}
